@@ -6,7 +6,9 @@ export class NavbarComponent {
   menu = [{
     'title': 'Home',
     'link': '/'
-  }];
+                  },{
+    'title': 'Lesson 1',                
+    'link' : '/lesson1'}];
   $location;
   isCollapsed = true;
 
