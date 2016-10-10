@@ -1,0 +1,1 @@
+Welcome to Coding Blind! This website will walk you through a series of programming tutorials using the programming language Python. You will not need your own screen reader software when using this website. Press alt-H to access the help menu at any time. Press alt-SOMETHING to begin Lesson 1. 
