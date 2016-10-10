@@ -8,7 +8,7 @@ export class NavbarComponent {
     'link': '/'
                   },{
     'title': 'Lesson 1',                
-    'link' : '/lesson1'}];
+    'link' : '/classroom'}];
   $location;
   isCollapsed = true;
 

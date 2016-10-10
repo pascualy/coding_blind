@@ -15,8 +15,9 @@ import {routeConfig} from './app.config';
 import navbar from '../components/navbar/navbar.component';
 import footer from '../components/footer/footer.component';
 import main from './main/main.component';
-import whiteboard from '../components/whiteboard/whiteboard.component'
-import ide from '../components/ide/ide.component'
+import classroom from './classroom/classroom.component';
+import whiteboard from '../components/whiteboard/whiteboard.component';
+import ide from '../components/ide/ide.component';
 import constants from './app.constants';
 import util from '../components/util/util.module';
 
@@ -43,6 +44,7 @@ angular.module('codingBlindApp', [
   navbar,
   footer,
   main,
+  classroom,
   ide,
   whiteboard,
   constants,
