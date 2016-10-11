@@ -4,6 +4,10 @@ const angular = require('angular');
 const ngCookies = require('angular-cookies');
 const ngResource = require('angular-resource');
 const ngSanitize = require('angular-sanitize');
+const ngAria = require('angular-aria');
+const ngAnimate = require('angular-animate');
+const ngMessages = require('angular-messages');
+const ngMaterial = require('angular-material');
 
 const ngRoute = require('angular-route');
 
@@ -20,6 +24,7 @@ import whiteboard from '../components/whiteboard/whiteboard.component';
 import ide from '../components/ide/ide.component';
 import constants from './app.constants';
 import util from '../components/util/util.module';
+import sidemenu from '../components/sidemenu/sidemenu.component';
 
 import './app.scss';
 
@@ -34,6 +39,10 @@ angular.module('codingBlindApp', [
   ngResource,
   // helps you sanitize user input of malicious tags
   ngSanitize,
+  ngAria,
+  ngAnimate,
+  ngMessages,
+  ngMaterial,
 
   // https://docs.angularjs.org/api/ngRoute/service/$route#example
   // check out the example above to get an idea how to use the ngRoute
@@ -48,7 +57,8 @@ angular.module('codingBlindApp', [
   ide,
   whiteboard,
   constants,
-  util
+  util,
+  sidemenu
 ])
   .config(routeConfig)
 ;
