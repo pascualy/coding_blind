@@ -5,8 +5,9 @@ import util from '../../components/util/util.module';
 
 export class MainController {
   /*@ngInject*/
+  example = 'hello';
   constructor() {
-    //this.example = 'Hello';
+    console.log(this.example)
 
   }
 }
