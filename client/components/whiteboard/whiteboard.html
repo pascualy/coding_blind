@@ -1,11 +1,25 @@
 <div class="objective">
 	<h2>{{ $ctrl.section }}: {{ $ctrl.title}}</h2>
 	<div class="objective-header">
-		<h4> {{ $ctrl.header }} </h4>
+		<p> {{ $ctrl.header }} </p>
 	</div>
 
 	<div class="objective-body">
 		<p> {{ $ctrl.body}} </p>
+	</div>
+
+	<div class="interpreter">
+		<div ng-repeat="cmd in $ctrl.commands">
+			<p> >>> <span class="userinput"> {{ cmd.command }} </span></p> 
+			<p> 	<span class="userinput"> {{ cmd.output }}  </span></p>
+		</div>
+	</div>
+	<br>
+	<div ng-repeat="hint in $ctrl.hints">
+		<div class="hints">
+			<span class="hint"> {{ hint }} </span>
+		</div>
+		<br>
 	</div>
 
 

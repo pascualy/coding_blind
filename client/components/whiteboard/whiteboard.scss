@@ -1,7 +1,9 @@
 .objective {
   padding-right:30px;
   padding-left:30px;
-
+  min-height: 700px;
+  height: auto !important;
+  height: 700px;
 }
 
 .objective-header {
@@ -12,4 +14,33 @@
 .objective-body {
 
   
+}
+
+.interpreter {
+	padding: 5px;
+	background-color: #000000;
+	color: white;
+	font-size: 10pt;
+    border-radius: 5px;
+}
+
+.hints {
+	padding: 5px;
+	background-color: #FFFFFF;
+    border-radius: 5px;	
+
+}
+
+.hint {
+	color: black;
+	font-size: 10pt;
+}
+
+.userinput {
+	color: lightblue;
+
+}
+
+#content {
+
 }

@@ -16,6 +16,7 @@ $fa-font-path: '/assets/fonts/font-awesome/';
   padding: 0.2em 0;
 }
 
+
 // Component styles are injected through gulp
 /* inject:scss */
 @import 'classroom/classroom';
@@ -25,4 +26,5 @@ $fa-font-path: '/assets/fonts/font-awesome/';
 @import '../components/modal/modal';
 @import '../components/sidemenu/sidemenu';
 @import '../components/whiteboard/whiteboard';
+@import '../components/navbar/navbar';
 /* endinject */
