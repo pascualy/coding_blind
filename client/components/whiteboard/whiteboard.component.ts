@@ -1,5 +1,6 @@
 const angular = require('angular');
 
+
 export class WhiteboardComponent {
 	section = '1.1';
 	title = 'Math in Python';
