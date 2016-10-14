@@ -25,7 +25,7 @@ import ide from '../components/ide/ide.component';
 import constants from './app.constants';
 import util from '../components/util/util.module';
 import sidemenu from '../components/sidemenu/sidemenu.component';
-
+import content from  '../components/content/content.module';
 import './app.scss';
 
 // Create module that will be bootstrapped (aka started) in the next line
@@ -58,7 +58,8 @@ angular.module('codingBlindApp', [
   whiteboard,
   constants,
   util,
-  sidemenu
+  sidemenu,
+  content
 ])
   .config(routeConfig)
 ;
