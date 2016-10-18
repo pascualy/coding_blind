@@ -3,16 +3,17 @@ import content from  '../content/content.module';
 
 export class WhiteboardComponent {
 	content;
+	lesson;
 	section;
 	title;
 	header;
 	hints;
-	body;
+	body;	
 	examples;
 	commands;
 	constructor(Content) {
 		//console.log(content.lesson);
-		this.content = Content;
+		this.content = Content[0];
 		this.section = this.content.section;
 		this.title = this.content.title;
 		this.header = this.content.header;
