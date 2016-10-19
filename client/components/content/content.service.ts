@@ -2,10 +2,20 @@
 const angular = require('angular');
 
 
-export function ContentService($window, $routeParams) {
+export function ContentService($window, $location, $routeParams) {
   'ngInject';
-  console.log($routeParams.message);
-  var Content = [ {
+  console.log("hellllll");
+  console.log($routeParams.lesson);
+  var lesson = parseInt($routeParams.lesson) - 1;
+  var section = parseInt($routeParams.section) - 1;
+
+  if (lesson != 0 || section != 0){
+  	console.log('hchasdf')
+  	$location.path( "/" );
+  	return false;
+  }
+
+  var lessons = [ [{
 		"lesson" : '1.1',
 		"title" : 'Python Basics',
 		"header" : '',
@@ -26,8 +36,7 @@ export function ContentService($window, $routeParams) {
 						"command":"result = 10*20\nprint result",
 						"output":"200"
 					}]
-		}];
+		}]];
 
-
-  return Content;
+  return lessons[lesson][section];
 }
