@@ -6,14 +6,14 @@ import util from '../../components/util/util.module';
 export class MainController {
   /*@ngInject*/
   example = 'hello';
-  constructor() {
+  constructor(Shortcuts) {
     console.log(this.example)
 
   }
 }
 
 
-export default angular.module('codingBlindApp.main', [
+export default angular.module('codingBlindApp.main', ['directives.shortcuts',
   ngRoute])
     .config(routing)
     .component('main', {

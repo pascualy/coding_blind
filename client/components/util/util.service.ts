@@ -7,9 +7,12 @@ const angular = require('angular');
 export function UtilService($window) {
   'ngInject';
   var Util = {
+    textToSpeech(text) {
+      console.log(text);
+    },
     /**
      * Return a callback or noop function
-     *
+     * 
      * @param  {Function|*} cb - a 'potential' function
      * @return {Function}
      */

@@ -10,12 +10,13 @@ export class ClassroomComponent {
 
   objective = 'asdf';
 
-  constructor() {
+  constructor(Util, Shortcuts) {
     this.objective = 'Counting Money!';
+    //console.log(Util.textToSpeech(this.objective));
   }
 }
 
-export default angular.module('codingBlindApp.classroom', [ngRoute])
+export default angular.module('codingBlindApp.classroom', [ngRoute, 'directives.shortcuts', 'directives.util'])
   .config(routes)
   .component('classroom', {
     template: require('./classroom.html'),

@@ -14,7 +14,18 @@
         <li ng-repeat="item in $ctrl.menu" ng-class="{active: $ctrl.isActive(item.link)}">
             <a ng-href="{{item.link}}">{{item.title}}</a>
         </li>
+        <li>
+            <a ng-href="/" ng-click="$ctrl.openLeftMenu('helpMenu')">Help</a>
+        </li>
       </ul>
     </div>
   </div>
 </div>
+
+
+<md-sidenav md-component-id="left" class="md-sidenav-left sideNavContainer">
+    <md-button href="">Home</md-button><br/>
+    <md-button href="">Lesson 1</md-button><br/>
+    <md-button href="">Lesson 2</md-button><br/>
+    <md-button href="">Lesson 3</md-button>
+</md-sidenav>

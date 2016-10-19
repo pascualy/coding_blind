@@ -15,7 +15,6 @@ const uiBootstrap = require('angular-ui-bootstrap');
 // const ngMessages = require('angular-messages');
 
 import {routeConfig} from './app.config';
-
 import navbar from '../components/navbar/navbar.component';
 import footer from '../components/footer/footer.component';
 import main from './main/main.component';
@@ -23,9 +22,11 @@ import classroom from './classroom/classroom.component';
 import whiteboard from '../components/whiteboard/whiteboard.component';
 import ide from '../components/ide/ide.component';
 import constants from './app.constants';
-import util from '../components/util/util.module';
 import sidemenu from '../components/sidemenu/sidemenu.component';
+import util from '../components/util/util.module';
 import content from  '../components/content/content.module';
+import shortcuts from '../components/shortcuts/shortcuts.module';
+
 import './app.scss';
 
 // Create module that will be bootstrapped (aka started) in the next line
@@ -59,10 +60,28 @@ angular.module('codingBlindApp', [
   constants,
   util,
   sidemenu,
-  content
+  content,
+  shortcuts
 ])
   .config(routeConfig)
 ;
+
+angular.module('codingBlindApp').directive('checkkey', function($window) {
+    return {
+        restrict: 'A',
+        link: function(scope, elem, attrs) {
+            console.log('workedasdfasd');
+            elem.bind('keyup', function(event) {
+                console.log('heddllo');
+                if (event.keyCode === 13) {
+                    event.preventDefault();
+                    return false;
+                }
+            });
+        }
+    }
+});
+
 
 
 // Waits for document to be ready until loading dom
