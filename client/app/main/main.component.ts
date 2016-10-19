@@ -13,7 +13,7 @@ export class MainController {
 }
 
 
-export default angular.module('codingBlindApp.main', ['directives.shortcuts',
+export default angular.module('codingBlindApp.main', [
   ngRoute])
     .config(routing)
     .component('main', {

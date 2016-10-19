@@ -16,7 +16,7 @@ export class ClassroomComponent {
   }
 }
 
-export default angular.module('codingBlindApp.classroom', [ngRoute, 'directives.shortcuts', 'directives.util'])
+export default angular.module('codingBlindApp.classroom', [ngRoute, 'directives.util'])
   .config(routes)
   .component('classroom', {
     template: require('./classroom.html'),

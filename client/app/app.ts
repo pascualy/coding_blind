@@ -22,10 +22,8 @@ import classroom from './classroom/classroom.component';
 import whiteboard from '../components/whiteboard/whiteboard.component';
 import ide from '../components/ide/ide.component';
 import constants from './app.constants';
-import sidemenu from '../components/sidemenu/sidemenu.component';
 import util from '../components/util/util.module';
 import content from  '../components/content/content.module';
-import shortcuts from '../components/shortcuts/shortcuts.module';
 
 import './app.scss';
 
@@ -59,10 +57,8 @@ angular.module('codingBlindApp', [
   whiteboard,
   constants,
   util,
-  sidemenu,
-  content,
-  shortcuts
-])
+  content
+  ])
   .config(routeConfig)
 ;
 
