@@ -5,7 +5,7 @@
 	</div>
 
 	<div class="objective-body">
-		<p> {{ $ctrl.body}} </p>
+		<p id="bodyText"> {{ $ctrl.body}} </p>
 	</div>
 
 	<div class="interpreter">
@@ -16,7 +16,7 @@
 	</div>
 	<br>
 	<div ng-repeat="hint in $ctrl.hints">
-		<div class="hints">
+		<div id="hintText" class="hints">
 			<span class="hint"> {{ hint }} </span>
 		</div>
 		<br>
@@ -24,7 +24,6 @@
 
 
 </div>
-
 <div class="class-list">
 
 </div>

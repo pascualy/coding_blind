@@ -6,10 +6,20 @@ import util from '../../components/util/util.module';
 export class MainController {
   /*@ngInject*/
   example = 'hello';
+  $window;
   constructor() {
     console.log(this.example)
-
+    this.$window = window;
+    
   }
+
+
+  readIntro = function($window) {
+    var x = document.getElementById("intro").innerText;
+    var msg = new $window.SpeechSynthesisUtterance("hey");
+    $window.speechSynthesis.speak(msg);
+  }
+
 }
 
 

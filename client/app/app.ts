@@ -66,15 +66,33 @@ angular.module('codingBlindApp').directive('checkkey', function($window) {
 
   return {
     link: function(scope, elem, attrs) {
-      var map = {18: false, 72: false}
+      var map = {18: false, 49: false, 72: false, 81: false, 87: false}
       console.log('workedasdfasd');
       elem.bind('keydown', function(event) {
         if (event.which in map) {
           map[event.which] = true;
-          if (map[18] && map[72]) {
+          if (map[72] && map[18]) {
             var msg = new $window.SpeechSynthesisUtterance("Hello World");
             $window.speechSynthesis.speak(msg);
             event.preventDefault();
+          }
+
+          if (map[81] && map[18]) {
+            var bodyText = document.getElementById("bodyText").innerText;
+            var msg = new $window.SpeechSynthesisUtterance(bodyText);
+            $window.speechSynthesis.speak(msg);
+            event.preventDefault();
+          }
+
+          if (map[87] && map[18]) {
+            var hintText = document.getElementById("hintText").innerText;
+            var msg = new $window.SpeechSynthesisUtterance(hintText);
+            $window.speechSynthesis.speak(msg);
+            event.preventDefault();
+          }
+          if (map[49] && map[18]) {
+            console.log($window.location.host);
+            $window.location.href = '/classroom';
           }
         }
       });
