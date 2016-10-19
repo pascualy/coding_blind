@@ -12,7 +12,7 @@
     src="https://cdn.rawgit.com/brython-dev/brython/3.2.2/www/src/brython.js">
   </script>
 </head>
-<body onload="brython()">
+<body onload="brython()" checkkey>
     <!--[if lt IE 9]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -33,13 +33,12 @@
 
 
 
-
 <!--     <script src="http://www.skulpt.org/static/debugger.js" type="text/javascript"></script> -->
 <!--     <script src='./components/ide/lib/skulpt.js'></script>
     <script src='./components/ide/lib/skulpt-stdlib.js'></script> --> 
     <navbar></navbar>
 
-    <div ng-view="" checkkey ></div>
+    <div ng-view="" ></div>
     <footer></footer>
 </body>
 </html>
