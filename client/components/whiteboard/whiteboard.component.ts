@@ -11,7 +11,7 @@ export class WhiteboardComponent {
 	example;
 	commands;
 	constructor(Content) {
-		this.content = Content;
+		this.content = Content[0];
 		this.lesson = this.content.lesson;
 		this.title = this.content.title;
 		this.header = this.content.header;
