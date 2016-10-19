@@ -6,12 +6,14 @@ import io, sys
 def run(event):
 	old_stdout = sys.stdout
 	redirected_output = sys.stdout = io.StringIO()
-	exec(document["zone"].value)
+	exec(document["code"].value)
 	sys.stdout = old_stdout
 	document['output'].innerText = redirected_output.getvalue()
 	
-document['mybutton'].bind('click', run)
+document['run'].bind('click', run)
 </script>
 
-<input id="zone"> </input <button id="mybutton">run</button>
-<div id="output"></div>
+
+<textarea id="code" class=codearea rows="20"> </textarea><button id="run">run</button>
+
+<div id="content"></div>
