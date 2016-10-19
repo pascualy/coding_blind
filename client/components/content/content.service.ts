@@ -20,7 +20,7 @@ export function ContentService($window, $routeParams) {
 					We can call this variable whatever we want, but in this problem, let's just call it the word result.
 					The 2 lines of code for this problem have already been written for you in the coding area. 
 					They read "result = 10 * 20 and print result." The first line assigns 10 * 20 to result, and the second line
-					prints the value of result to the screen. Simply press alt R to run the code.`
+					prints the value of result to the screen. Simply press alt R to run the code.`,
 		"example" : "",
 		"commands" : [{
 						"command":"result = 10*20\nprint result",

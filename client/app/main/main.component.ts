@@ -6,7 +6,7 @@ import util from '../../components/util/util.module';
 export class MainController {
   /*@ngInject*/
   example = 'hello';
-  constructor(Shortcuts) {
+  constructor() {
     console.log(this.example)
 
   }

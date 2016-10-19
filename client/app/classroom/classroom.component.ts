@@ -10,7 +10,7 @@ export class ClassroomComponent {
 
   objective = 'asdf';
 
-  constructor(Util, Shortcuts) {
+  constructor(Util) {
     this.objective = 'Counting Money!';
     //console.log(Util.textToSpeech(this.objective));
   }

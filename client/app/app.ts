@@ -63,21 +63,28 @@ angular.module('codingBlindApp', [
 ;
 
 angular.module('codingBlindApp').directive('checkkey', function($window) {
-    return {
-        restrict: 'A',
-        link: function(scope, elem, attrs) {
-            console.log('workedasdfasd');
-            elem.bind('keyup', function(event) {
-                console.log('heddllo');
-                var msg = new $window.SpeechSynthesisUtterance('Hello World');
-                $window.speechSynthesis.speak(msg);
-                if (event.keyCode === 13 ) {
-                    event.preventDefault();
-                    return false;
-                }
-            });
+
+  return {
+    link: function(scope, elem, attrs) {
+      var map = {18: false, 72: false}
+      console.log('workedasdfasd');
+      elem.bind('keydown', function(event) {
+        if (event.which in map) {
+          map[event.which] = true;
+          if (map[18] && map[72]) {
+            var msg = new $window.SpeechSynthesisUtterance("Hello World");
+            $window.speechSynthesis.speak(msg);
+            event.preventDefault();
+          }
         }
+      });
+      elem.bind('keyup', function(event) {
+        if (event.which in map) {
+          map[event.which] = false;
+        }
+      });
     }
+  }
 });
 
 
