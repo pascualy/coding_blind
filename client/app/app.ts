@@ -71,7 +71,7 @@ angular.module('codingBlindApp').directive('checkkey', function($window) {
                 console.log('heddllo');
                 var msg = new $window.SpeechSynthesisUtterance('Hello World');
                 $window.speechSynthesis.speak(msg);
-                if (event.keyCode === 13) {
+                if (event.keyCode === 13 ) {
                     event.preventDefault();
                     return false;
                 }

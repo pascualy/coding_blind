@@ -2,14 +2,15 @@
 const angular = require('angular');
 
 
-export function ContentService($window) {
+export function ContentService($window, $routeParams) {
   'ngInject';
+  console.log($routeParams.message);
   var Content = [ {
 		"lesson" : '1.1',
 		"title" : 'Python Basics',
 		"header" : '',
 		"hints" : ['Press alt R to run the code'],
-		"body" : `Let's start with a simple math problem! Programming languages are excellent	
+		"body" : `Let's start  with a simple math problem! Programming languages are excellent	
 					for doing math because of their incredible speed. You can use the plus, dash, asterisk, or slash keys to do the 
 					four basic math operations: addition, subtraction, multiplication, and division.
 					Let's say we wanted to know what ten times twenty was. We could simply type in 10 * 20 and press enter.
@@ -26,6 +27,7 @@ export function ContentService($window) {
 						"output":"200"
 					}]
 		}];
+
 
   return Content;
 }
